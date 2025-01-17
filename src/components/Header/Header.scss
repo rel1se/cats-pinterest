@@ -1,0 +1,43 @@
+@use '../../styles/_variables' as *;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  background-color: $header-color;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.navbar {
+  display: flex;
+  margin-left: 62px;
+}
+
+.header-button {
+  flex: 0 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  opacity: 80%;
+  font-size: 14px;
+  font-family: sans-serif;
+  background-color: $header-color;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $header-hover-color;
+  }
+
+  &.active {
+    background-color: $header-hover-color;
+    opacity: 100%;
+  }
+}
