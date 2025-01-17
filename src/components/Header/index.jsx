@@ -8,6 +8,7 @@ const Header = ({activePage, onNavigate}) => {
                 <Link to="/">
                     <button
                         className={`header-button ${activePage === 'all-cats' ? 'active' : ''}`}
+                        onClick={() => onNavigate('all-cats')}
                     >
                         Все котики
                     </button>

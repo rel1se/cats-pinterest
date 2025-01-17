@@ -4,6 +4,7 @@ import Header from "./components/Header/index.jsx";
 import HomePage from "./pages/HomePage/index.jsx";
 import FavoritePage from "./pages/FavoritePage/index.jsx";
 import {useState} from "react";
+import {FavoriteProvider} from "./context/FavoriteContext.jsx";
 
 function App() {
     const [activePage, setActivePage] = useState('all-cats');
@@ -12,13 +13,16 @@ function App() {
         setActivePage(page);
     };
     return (
-        <Router>
-            <Header activePage={activePage} onNavigate={handleNavigate} />
-            <Routes>
-                <Route path="/" element={<HomePage/>}/>
-                <Route path="/favorite" element={<FavoritePage/>}/>
-            </Routes>
-        </Router>
+        <FavoriteProvider>
+            <Router>
+                <Header activePage={activePage} onNavigate={handleNavigate} />
+                <Routes>
+                    <Route path="/" element={<HomePage/>}/>
+                    <Route path="/favorite" element={<FavoritePage/>}/>
+                </Routes>
+            </Router>
+        </FavoriteProvider>
+
     );
 }
 
