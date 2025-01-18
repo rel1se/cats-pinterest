@@ -1,5 +1,6 @@
 .cat-item {
   position: relative;
+  align-self: center;
   width: 224px;
   height: 224px;
   overflow: hidden;
@@ -33,4 +34,12 @@
 
 .cat-item:hover .favorite-heart {
   opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .cat-item {
+    align-self: center;
+    width: 168px;
+    height: 168px;
+  }
 }

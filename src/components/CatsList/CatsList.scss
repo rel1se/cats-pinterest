@@ -1,7 +1,9 @@
 .cat-grid {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(5, 1fr);
-  gap: 48px;
+  grid-gap: 48px;
 }
 .cat-grid__content {
   position: relative;
@@ -14,4 +16,24 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  .cat-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .cat-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 650px) {
+  .cat-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 12px;
+  }
 }

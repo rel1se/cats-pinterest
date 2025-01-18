@@ -8,7 +8,6 @@
   background-color: $header-color;
   display: flex;
   align-items: center;
-  padding: 0 16px;
 }
 
 .navbar {
@@ -39,5 +38,11 @@
   &.active {
     background-color: $header-hover-color;
     opacity: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    margin-left: 20px;
   }
 }
